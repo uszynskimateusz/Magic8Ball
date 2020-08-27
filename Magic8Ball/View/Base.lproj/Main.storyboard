@@ -15,38 +15,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask Me Anything...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJi-jN-1Ej">
-                                <rect key="frame" x="86" y="122" width="243" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-2I-QeE">
-                                <rect key="frame" x="0.0" y="303" width="414" height="257"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXw-2j-Ouv">
-                                <rect key="frame" x="178" y="667" width="59" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="Ask">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JoJ-vI-9Dj">
-                                <rect key="frame" x="178" y="667" width="59" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="Ask">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FOx-59-8cl"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="glZ-HI-Zpg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdM-hx-kHC" userLabel="TopView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="298"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJi-jN-1Ej">
+                                                <rect key="frame" x="86" y="131.5" width="242.5" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="AJi-jN-1Ej" firstAttribute="centerY" secondItem="RdM-hx-kHC" secondAttribute="centerY" id="Hho-Ff-5qx"/>
+                                            <constraint firstItem="AJi-jN-1Ej" firstAttribute="centerX" secondItem="RdM-hx-kHC" secondAttribute="centerX" id="uak-Bs-leV"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLq-eV-MES" userLabel="MiddleView">
+                                        <rect key="frame" x="0.0" y="299" width="414" height="298"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-2I-QeE">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="298"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sI3-2I-QeE" firstAttribute="centerY" secondItem="wLq-eV-MES" secondAttribute="centerY" id="5TM-Xl-siZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="sI3-2I-QeE" secondAttribute="bottom" id="Xs8-nv-r0A"/>
+                                            <constraint firstItem="sI3-2I-QeE" firstAttribute="centerX" secondItem="wLq-eV-MES" secondAttribute="centerX" id="hQk-1d-UCU"/>
+                                            <constraint firstAttribute="trailing" secondItem="sI3-2I-QeE" secondAttribute="trailing" id="iJk-WU-qgb"/>
+                                            <constraint firstItem="sI3-2I-QeE" firstAttribute="top" secondItem="wLq-eV-MES" secondAttribute="top" id="jgO-FK-cgh"/>
+                                            <constraint firstItem="sI3-2I-QeE" firstAttribute="leading" secondItem="wLq-eV-MES" secondAttribute="leading" id="za5-cv-jsE"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiA-Lb-e4f" userLabel="BottomView">
+                                        <rect key="frame" x="0.0" y="598" width="414" height="298"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXw-2j-Ouv">
+                                                <rect key="frame" x="177.5" y="121.5" width="59" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                                <state key="normal" title="Ask">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lXw-2j-Ouv" firstAttribute="centerX" secondItem="PiA-Lb-e4f" secondAttribute="centerX" id="Iii-Je-WnY"/>
+                                            <constraint firstItem="lXw-2j-Ouv" firstAttribute="centerY" secondItem="PiA-Lb-e4f" secondAttribute="centerY" id="Mh1-HH-JMl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="glZ-HI-Zpg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8DN-ny-EjS"/>
+                            <constraint firstAttribute="bottom" secondItem="glZ-HI-Zpg" secondAttribute="bottom" id="8nj-W1-3vB"/>
+                            <constraint firstAttribute="trailing" secondItem="glZ-HI-Zpg" secondAttribute="trailing" id="hA8-Xe-RFh"/>
+                            <constraint firstItem="glZ-HI-Zpg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hXK-3w-g5y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
