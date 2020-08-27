@@ -23,5 +23,4 @@ class ViewController: UIViewController {
         
         imageView.image = imageArray[Int.random(in: 0..<imageArray.count)]
     }
-    
 }
