@@ -58,13 +58,29 @@
 			children = (
 				69F03EA024F8018500E691BF /* AppDelegate.swift */,
 				69F03EA224F8018500E691BF /* SceneDelegate.swift */,
-				69F03EA424F8018500E691BF /* ViewController.swift */,
-				69F03EA624F8018500E691BF /* Main.storyboard */,
+				69F03EB524F801E800E691BF /* Controller */,
+				69F03EB424F801E000E691BF /* View */,
 				69F03EA924F8018800E691BF /* Assets.xcassets */,
 				69F03EAB24F8018800E691BF /* LaunchScreen.storyboard */,
 				69F03EAE24F8018800E691BF /* Info.plist */,
 			);
 			path = Magic8Ball;
+			sourceTree = "<group>";
+		};
+		69F03EB424F801E000E691BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69F03EA624F8018500E691BF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69F03EB524F801E800E691BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				69F03EA424F8018500E691BF /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
